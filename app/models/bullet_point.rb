@@ -9,4 +9,5 @@
 #
 
 class BulletPoint < ApplicationRecord
+  validates :description, presence: true
 end
