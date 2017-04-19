@@ -7,3 +7,6 @@ AllCops:
     - Gemfile
   Exclude:
     - db/schema.rb
+    - config/initializers/devise.rb
+Documentation:
+    Enabled: false
