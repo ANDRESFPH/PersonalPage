@@ -18,41 +18,22 @@ RSpec.describe Education, type: :model do
   let(:education) { build(:education) }
 
   context 'Fails' do
-    it 'raises an error when university name is not present' do
+    it 'raises an error when university name, start_date, title and degree are not present' do
       education.university_name = nil
-      expect(education).not_to be_valid
-    end
-
-    it 'is not valid when the education start_date is not present' do
       education.start_date = nil
-      expect(education).not_to be_valid
-    end
-
-    it 'is not valid when the education title is not present' do
       education.title = nil
-      expect(education).not_to be_valid
-    end
-
-    it 'is not valid when the education degree is not present' do
       education.degree = nil
+
       expect(education).not_to be_valid
+      expect(education.errors).to include(:university_name)
+      expect(education.errors).to include(:start_date)
+      expect(education.errors).to include(:title)
+      expect(education.errors).to include(:degree)
     end
   end
 
   context 'Success' do
-    it 'is valid when university name is present' do
-      expect(education).to be_valid
-    end
-
-    it 'is valid when start_date present' do
-      expect(education).to be_valid
-    end
-
-    it 'is valid when title present' do
-      expect(education).to be_valid
-    end
-
-    it 'is valid when degree present' do
+    it 'is valid when university name, start_date, title and degree are present' do
       expect(education).to be_valid
     end
   end

@@ -27,11 +27,7 @@ RSpec.describe Skill, type: :model do
     end
 
     context 'Success' do
-      it 'is valid when name is not nil' do
-        expect(skill).to be_valid
-      end
-
-      it 'is valid when level is between 1 and 10' do
+      it 'is valid when name is not nil and level is between 1 and 10' do
         expect(skill).to be_valid
       end
     end
