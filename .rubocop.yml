@@ -10,3 +10,6 @@ AllCops:
     - config/initializers/devise.rb
 Documentation:
     Enabled: false
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
