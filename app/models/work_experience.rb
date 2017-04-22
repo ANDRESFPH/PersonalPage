@@ -12,5 +12,6 @@
 #
 
 class WorkExperience < ApplicationRecord
+  has_many :bullet_points
   validates :company_name, :job_title, :start_date, presence: true
 end
