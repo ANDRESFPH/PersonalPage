@@ -30,6 +30,7 @@ class User < ApplicationRecord
   has_many :skills
   has_many :languages
   has_many :work_experiences
+  has_many :studies
 
   # Validations
   validates :first_name, presence: true
