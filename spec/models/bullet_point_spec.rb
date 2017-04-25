@@ -12,8 +12,9 @@
 require 'rails_helper'
 
 RSpec.describe BulletPoint, type: :model do
-  let(:work_experience) { create :work_experience }
-  let(:bullet_point) { build(:bullet_point, work_experience: work_experience) }
+  let(:user)            { create :user }
+  let(:work_experience) { create(:work_experience, user: user) }
+  let(:bullet_point)    { build(:bullet_point, work_experience: work_experience) }
   describe :validations do
     context 'Fails' do
       it 'raises an error when description is nil' do
