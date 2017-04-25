@@ -29,6 +29,7 @@ class User < ApplicationRecord
   # Associations
   has_many :skills
   has_many :languages
+  has_many :work_experiences
 
   # Validations
   validates :first_name, presence: true
