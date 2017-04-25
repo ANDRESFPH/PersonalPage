@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: educations
+# Table name: studies
 #
 #  id              :uuid             not null, primary key
 #  university_name :string
@@ -13,7 +13,7 @@
 #  user_id         :uuid
 #
 
-class Education < ApplicationRecord
+class Study < ApplicationRecord
   # Associations
   belongs_to :user
 

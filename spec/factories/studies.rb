@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: educations
+# Table name: studies
 #
 #  id              :uuid             not null, primary key
 #  university_name :string
@@ -14,7 +14,7 @@
 #
 
 FactoryGirl.define do
-  factory :education do
+  factory :study do
     university_name { Faker::Educator.university }
     start_date      { Date.today }
     end_date        { 5.years.from_now }
