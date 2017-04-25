@@ -26,5 +26,6 @@ FactoryGirl.define do
     last_name     { Faker::Superhero.suffix }
     email         { Faker::Internet.email(first_name) }
     date_of_birth { Date.today - 20.years }
+    password      { Faker::Internet.password }
   end
 end
