@@ -9,7 +9,15 @@ AllCops:
     - db/schema.rb
     - config/initializers/devise.rb
 Documentation:
-    Enabled: false
+  Enabled: false
 
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context']
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*.rb
+
+MethodLength:
+  Exclude:
+    - db/migrate/*.rb
