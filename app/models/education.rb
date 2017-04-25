@@ -10,9 +10,13 @@
 #  degree          :string
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  user_id         :uuid
 #
 
 class Education < ApplicationRecord
+  # Associations
+  belongs_to :user
+
   # Validations
   validates :university_name, presence: true
   validates :start_date, presence: true
