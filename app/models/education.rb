@@ -13,6 +13,7 @@
 #
 
 class Education < ApplicationRecord
+  # Validations
   validates :university_name, presence: true
   validates :start_date, presence: true
   validates :title, presence: true

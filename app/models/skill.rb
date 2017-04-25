@@ -11,7 +11,10 @@
 #
 
 class Skill < ApplicationRecord
+  # Associations
   belongs_to :user
+
+  # Validations
   validates :name, presence: true
   validates :level, inclusion: { in: (1..10) }
 end

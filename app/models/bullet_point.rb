@@ -10,7 +10,9 @@
 #
 
 class BulletPoint < ApplicationRecord
+  # Associations
   belongs_to :work_experience
 
+  # Validations
   validates :description, presence: true
 end
