@@ -36,6 +36,7 @@ RSpec.describe User, type: :model do
       it 'when the first name, email and password are empty' do
         user.first_name = nil
         user.email = nil
+        user.password = nil
         expect(user).not_to be_valid
         expect(user.errors).to include(:first_name)
         expect(user.errors).to include(:email)
