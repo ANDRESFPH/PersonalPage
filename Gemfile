@@ -40,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rubocop', '~> 0.48.1', require: false
 
 gem 'haml', '~> 4.0.5'
+gem "haml-rails", "~> 0.9"
 
 gem 'devise'
 
